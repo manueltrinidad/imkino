@@ -1,0 +1,74 @@
+<temp-root>
+    <!-- Navbar -->
+    <template id="t-navbar">
+        <div class="navbar">
+            <a href="/" class="main-title">KiNO</a>
+            {{#site}}
+            <span>{{site}}</span>
+            {{/site}}
+            {{^site}}
+            <span>Film, Music, Code, Covfefe </span>
+            {{/site}}
+        </div>
+    </template>
+    
+    <!-- Footer -->
+    <template id="t-footer">
+        <footer id="footer-cont">
+            <p class="footer-text">Last Edited: {{lastEdit}}</p>
+            <p class="footer-text">Shamelessly using Mustache.js for everything :)</p>
+            <p class="footer-text">I will finish editing this later</p>
+            <p class="footer-text">yes Nikita, I will add your banner later as well</p>
+        </footer>
+    </template>
+    
+    <!-- Main | Links to other sites -->
+    <template id="t-main-links">
+        <div class="links-cont">
+            {{#links}}
+            <a href="{{url}}">
+                <div class="link-cont">
+                    <div class="link-letter">{{letter}}</div>
+                    <div class="link-description">{{description}}</div>
+                </div>
+            </a>
+            {{/links}}
+        </div>
+    </template>
+    
+    <!-- About | Main Section -->
+    <template id="t-about">
+        <div id="about-me-cont">
+            <div>
+                <p class="about-poster-text">Oh Look.</p>
+                <p class="about-poster-text">Another 80's Style Site.</p>
+                <p class="about-poster-text">How Creative.</p>
+                <p class="about-poster-text">I Bet It Says "I Love Films".</p>
+                <h2 class="about-me-title">
+                    BIO
+                </h2>
+                <p id="about-me-text">
+                    I Love Films. KiNO extends Manuel. I used to watch films all day, but then I took a <i> major in cyber security</i> to the knee. Based in Estonia because Estonia is based. Originally from Mexico & proud future owner of a taco truck. I take pictures of people doing things but my pidgeon photography is better. I might speak in 日本語 when I'm drunk. Can't dance for shit, but will headbang to Pantera all day long. <a href="https://www.youtube.com/watch?v=2AZ5r11k31w">What I'm Trying to Tell You</a>  by Suede is my anthem, and Boyhood is my flag. Cinema and I will make a comeback.
+                </p>
+                <h2 class="about-me-title">
+                    FIGHT ME
+                </h2>
+                <p id="about-me-text">
+                    Pineapple belongs on pizza. Black is the best color. Pluto > the rest of the solar system. Metallica over Megadeth.
+                </p>
+            </div>
+            <div>
+                <img id="about-me-img" src="../images/me_praying.jpg" alt="">
+                <div id="about-links">
+                    <a href="https://www.instagram.com/manuels.insta/">
+                        Instagram
+                    </a>
+                    <a href="https://www.flickr.com/photos/155618053@N02/albums">
+                        Flickr
+                    </a>
+                </div>
+            </div>
+        </div>
+    </template>
+    
+</temp-root>
