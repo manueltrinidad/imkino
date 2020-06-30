@@ -21,12 +21,11 @@
     <div id="templates">
     </div>
     <script>
-        $("#templates").load("/templates/templates.html");
-        $(document).ready(function() {
-            var app = new App();
-            setTimeout(function() {
-              app.render("about")
-            }, GENERAL_VARIABLES.waitingTime);
+        $("#templates").load("/templates/templates.html", function() {
+            $(document).ready(function() {
+                var app = new App();
+                app.render("about");
+            });
         });
     </script>
 </body>

@@ -26,11 +26,9 @@
     <template id="t-main-links">
         <div class="links-cont">
             {{#links}}
-            <a href="{{url}}">
-                <div class="link-cont">
-                    <div class="link-letter">{{letter}}</div>
-                    <div class="link-description">{{description}}</div>
-                </div>
+            <a href="{{url}}" class="link-cont">
+                <div class="link-letter">{{letter}}</div>
+                <div class="link-description">{{description}}</div>
             </a>
             {{/links}}
         </div>
@@ -48,7 +46,7 @@
                     BIO
                 </h2>
                 <p id="about-me-text">
-                    I Love Films. KiNO extends Manuel. I used to watch films all day, but then I took a <i> major in cyber security</i> to the knee. Based in Estonia because Estonia is based. Originally from Mexico & proud future owner of a taco truck. I take pictures of people doing things but my pidgeon photography is better. I might speak in 日本語 when I'm drunk. Can't dance for shit, but will headbang to Pantera all day long. <a href="https://www.youtube.com/watch?v=2AZ5r11k31w">What I'm Trying to Tell You</a>  by Suede is my anthem, and Boyhood is my flag. Cinema and I will make a comeback.
+                    I Love Films. <span class="code-text-about"><span class="code-green">KiNO</span> extends <span class="code-blue">Manuel</span></span>. I used to watch films all day, but then I took a <i> major in cyber security</i> to the knee. Based in Estonia because Estonia is based. Originally from Mexico & proud future owner of a taco truck. I take pictures of people doing things but my pidgeon photography is better. I might speak in 日本語 when I'm drunk. Can't dance for shit, but will headbang to Pantera all day long. <a href="https://www.youtube.com/watch?v=2AZ5r11k31w">What I'm Trying to Tell You</a>  by Suede is my anthem, and Boyhood is my flag. Cinema and I will make a comeback.
                 </p>
                 <h2 class="about-me-title">
                     FIGHT ME
@@ -57,7 +55,7 @@
                     Pineapple belongs on pizza. Black is the best color. Pluto > the rest of the solar system. Metallica over Megadeth.
                 </p>
             </div>
-            <div>
+            <div id="about-img-cont">
                 <img id="about-me-img" src="../images/me_praying.jpg" alt="">
                 <div id="about-links">
                     <a href="https://www.instagram.com/manuels.insta/">
