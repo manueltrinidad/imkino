@@ -69,4 +69,16 @@
         </div>
     </template>
     
+    <!-- Journal | Entries -->
+    <template id="t-journal-entries">
+        <div id="journal-cont">
+            {{#entries}}
+            <div class="journal-entry-cont">
+                <h2 class="journal-date">{{date}}</h2>
+                <p class="journal-entry-text">{{content}}</p>
+            </div>
+            {{/entries}}
+        </div>
+    </template>
+    
 </temp-root>

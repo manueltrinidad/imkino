@@ -9,6 +9,11 @@ const MAIN_DATA = {
             url : "/about/"
         },
         {
+            letter : "J",
+            description : "Journal",
+            url : "/journal/"
+        },
+        {
             letter : "P",
             description : "Photo | Flickr",
             url : "https://www.flickr.com/photos/155618053@N02/albums"
