@@ -10,6 +10,31 @@
     text-decoration: none;
 }
 
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
 a:active { text-decoration: none; }
 
 body {
@@ -46,7 +71,7 @@ body {
 
 #footer-cont {
     width: 900px;
-    height: 200px;
+    height: 150px;
     background-color: #12151a;
     display: flex;
     flex-direction: column;
@@ -59,7 +84,31 @@ body {
 
 .footer-text {
     color: #D4D9D8;
+    font-size: .75rem;
     margin-bottom: 8px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#badges-cont {
+    background: rgb(9,0,22);
+    background: linear-gradient(0deg, rgba(9,0,22,1) 5%, rgb(179, 84, 136) 54%, rgba(209,209,209,1) 100%);
+    width: 862px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 3px solid #C71F5F;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.badge {
+    max-width: 100px;
+    padding: 1rem .5rem;
 }
 
 .main-title {
@@ -225,48 +274,146 @@ body {
     color: #D4D9D8;
 }
 
+/* Films */
+
+#films-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 898px;
+    height: 600px;
+    background-color: #17181A;
+    border: 1px solid #521e31;
+}
+
+#films-sidebar-cont {
+    width: 25%;
+    height: 100%;
+    background-color: #373849;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#films-main-cont {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.director-link {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    color: #D4D9D8;
+    font-weight: 700;
+    border-bottom: 1px solid #818181;
+    transition: all 0.3s;
+}
+
+.director-link:hover {
+    background-color: #D4D9D8;
+    color: #17181A;
+}
+
+.film-info {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-info > * {
+    margin-bottom: .5rem;
+}
+
+.film-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.film-credit {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.film-review {
+    display: flex;
+    justify-content: space-between;
+    color: #D4D9D8;
+    padding: .5rem;
+}
+
+.film-poster {
+    width: 150px;
+    border-radius: 1rem;
+}
+
+.score-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 900;
+    font-size: .75rem;
+}
+
+.review-content {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-content > p {
+    margin-bottom: 1rem;
+}
+
+.review-date {
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 950px) {
     .container {
         width: 95%;
     }
-
+    
     .navbar {
         width: 95%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    
     .navbar > span {
         text-align: center;
     }
-
+    
     #footer-cont {
         width: 95%;
     }
-
+    
     /* About */
     #about-me-cont {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .about-me-title {
         width: 100%;
     }
-
+    
     #about-img-cont {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     #about-me-img {
         width: 80%;
     }
-
+    
     #about-me-text {
         width: 100%;
         margin-bottom: 1rem;
@@ -275,7 +422,7 @@ body {
 
 @media screen and (max-width: 398px) {
     /* Main */
-
+    
     .links-cont {
         justify-content: center;
     }

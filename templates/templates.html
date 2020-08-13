@@ -15,11 +15,23 @@
     <!-- Footer -->
     <template id="t-footer">
         <footer id="footer-cont">
+            <p class="footer-text footer-logo">KiNO</p>
             <p class="footer-text">Last Edited: {{lastEdit}}</p>
-            <p class="footer-text">Shamelessly using Mustache.js for everything :)</p>
-            <p class="footer-text">I will finish editing this later</p>
-            <p class="footer-text">yes Nikita, I will add your banner later as well</p>
         </footer>
+    </template>
+    
+    <!-- Badges -->
+    <template id="t-badges">
+        <div id="badges-cont">
+            {{#badges}}
+            {{#site_url}}
+            <a href="{{site_url}}" alt="{{title}}" class="badge"><img src="{{badge}}"></a>
+            {{/site_url}}
+            {{^site_url}}
+            <img src="{{badge}}" alt="{{title}}" class="badge">
+            {{/site_url}}
+            {{/badges}}
+        </div>
     </template>
     
     <!-- Main | Links to other sites -->
@@ -81,4 +93,46 @@
         </div>
     </template>
     
+    <!-- Films | App Layout -->
+    <template id="t-films-layout">
+        <div id="films-cont">
+            <div id="films-sidebar-cont">
+                {{#directors}}
+                <span class="director-link" onclick="showReviewsByDirector('{{id}}')">{{name}}</span>
+                {{/directors}}
+            </div>
+            <div id="films-main-cont"></div>
+        </div>
+        <h4>I refuse to use Letterboxd</h4>
+    </template>
+    
+    <!-- Films | Reviews -->
+    <template id="t-films-reviews">
+        {{#reviews}}
+        <div class="film-review">
+            <div class="film-info">
+                <div class="score-cont"><i class="material-icons">star</i> <span>{{content.score}}/100</span></div>
+                <img src="{{film.poster_url}}" alt="{{film.title}}" class="film-poster">
+                <span class="film-title">{{film.title}}</span>
+                <span class="film-title">({{film.release_date}})</span>
+                <br>
+                <span>Director</span>
+                {{#film.directors}}
+                <span class="film-credit">{{name}}</span>
+                {{/film.directors}}
+                <br>
+                <span>Writer</span>
+                {{#film.writers}}
+                <span class="film-credit">{{name}}</span>
+                <span class="film-credit">({{job}})</span>
+                {{/film.writers}}
+            </div>
+            <div class="review-content">
+                <p>{{content.text}}</p>
+                <span class="review-date">{{content.review_date}} by KiNO</span>
+
+            </div>
+        </div>
+        {{/reviews}}
+    </template>
 </temp-root>

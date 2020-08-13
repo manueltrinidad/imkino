@@ -9,6 +9,11 @@ const MAIN_DATA = {
             url : "/about/"
         },
         {
+            letter : "F",
+            description : "Films",
+            url : "/films/"
+        },
+        {
             letter : "J",
             description : "Journal",
             url : "/journal/"
